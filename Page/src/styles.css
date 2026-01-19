@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary: #f99e1a;
+    --dark: #282c34;
+    --light: #ffffff;
+    --bg-dark: #1c1e22;
+    --bg-card: #2e3138;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../public/header.png') no-repeat center center/cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px #000;
+    z-index: 1001;
+    margin-right: 20px;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    display: none;
+    font-size: 30px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.navbar {
+    margin-left: auto;
+    display: block;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li a {
+    color: var(--light);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-style: italic;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary);
+}
+
+.header-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 70px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--light);
+    line-height: 1;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px var(--primary);
+}
+
+.header-txt p {
+    font-size: 20px;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.about {
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    border-radius: 10px;
+    box-shadow: -10px 10px 0px var(--primary);
+}
+
+.about-txt {
+    flex: 1;
+}
+
+.about-txt h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1;
+}
+
+.about-txt p {
+    margin-bottom: 15px;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.roster {
+    padding: 50px 20px 100px;
+}
+
+.roster-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roster-header h3 {
+    font-size: 40px;
+    color: var(--light);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.roster-header p {
+    color: #999;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.char-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #3a3f4b;
+    position: relative;
+}
+
+.char-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.char-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 4px solid var(--primary);
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.card-info span {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer {
+    background-color: #0b0c0e;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 2px solid var(--primary);
+}
+
+.footer h2 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.social-link {
+    margin-bottom: 30px;
+}
+
+.social-link a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-card);
+    line-height: 45px;
+    border-radius: 50%;
+    margin: 0 8px;
+    color: var(--light);
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.social-link a:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.links {
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: #888;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    color: #444;
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .menu-icono {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(28, 30, 34, 0.98);
+        display: none;
+        text-align: center;
+        border-top: 2px solid var(--primary);
+        padding: 30px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+        margin-left: 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul li a {
+        display: block;
+        font-size: 20px;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+    
+    .about-txt h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-txt h1 {
+        font-size: 36px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .roster-header h3 {
+        font-size: 30px;
+    }
+}
