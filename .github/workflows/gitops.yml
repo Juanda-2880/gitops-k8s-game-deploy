@@ -90,9 +90,9 @@ jobs:
           sed -i "s|image: juandau2880/overwatchfanpage:.*$|image: juandau2880/overwatchfanpage:v${{ github.run_number }}|" ArgoCD/deployment.yaml
           
           # Verificación (Opcional, para ver en logs)
-          cat ArgoCD/deployment.yaml | grep "image:"
+          cat ArgoCD/manifests/deployment.yaml | grep "image:"
           
           # Commit y Push
-          git add ArgoCD/deployment.yaml
+          git add ArgoCD/manifests/deployment.yaml
           git commit -m "GitOps Auto-Update: Deploying version v${{ github.run_number }}"
           git push
