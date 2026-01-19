@@ -1,5 +1,5 @@
 name: "Run SAST Scan on Overwatch Fan Page"
-# ACTIVED GITHUB ACTIONS
+
 on:
   push:
     branches:
